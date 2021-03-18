@@ -1,0 +1,25 @@
+installinvg vim-plug:
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+enter vim config: ~/.vimrc
+
+and add the lines:
+
+call plug#begin('~/.vim/plugged')
+
+
+call plug#end()
+
+Now, add lines like Plug 'scrooloose/nerdtree' in between those lines, and close out of ~/.vimrc.
+Then, go back into .vimrc using vim and do the command :PlugInstall
+
+You can add lines in vim config like:
+
+map <C-f> :NERDTreeToggle<CR>
+
+(maps control-f to do :NERDTreeToggle, followed by carriage return
+
+For coc.nvim, I had to install node, so i went ahead and did that.
+

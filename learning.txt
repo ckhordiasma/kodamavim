@@ -1,0 +1,128 @@
+# VIM GUIDE
+
+## How to quit VIM
+
+[esc] :wq
+[esc] :q!
+[esc] :q
+
+## How to SAVE
+
+[esc] :w
+
+## Basic navigation 
+j - down
+k - up
+h - left
+l - right
+
+## Line navigation
+0 - beginning of line
+$ - before last character in line
+^ - first non whitespace character in line
+
+$a - INSERT MODE starting at end of line. equivalent to A
+
+## Specific navigation
+50j - down 50 lines
+25l - right 25 characters
+
+## Global navigation
+:25 - go to line 25
+G - bottom
+gg - top
+* - go to next occurrence of word 
+/ - search for a given string
+
+## Block navigation
+
+{ - up a block of code
+} - down a block of code (next whitespace line)
+d} - delete block of code below
+
+% - [Toggle/jump to front or end of bracket/brace/parentheses {
+
+(Works nested as well) 
+
+}]
+
+d% - deletes [until it sees (the next) closing bracket] (this one seems buggy to me)
+
+## INSERTING CHARACTERS 
+
+i - INSERT MODE
+o - INSERT MODE, but on new line below
+a - INSERT MODE, but one character to the right of the cursor
+A (caps) - INSERT MODE, but at the end of the current line 
+O (caps) - INSERT MODE, but on new line BEFORE
+I (caps) - INSERT MODE, but at the beginning of the line
+C (caps) - INSERT MODE, but replace everything after the cursor
+
+r - replace a single character
+3r - replace three characters with one character
+R (caps) - REPLACE MODE
+## Word navigation and editing
+
+w - move over a word
+b - move back a word
+W (B) - move over (back) a bunch-of-non-whitespace-characters
+dw - delete next word
+cw - remove selected word (starting from cursor) and go into insert mode
+
+0 - move to beginning of line
+^ - move to first non whitespace word
+
+f! - move to next occurrence of !. Puts cursor directly on !
+t? - move to next occurence of ?. Puts cursor one character before ?
+
+ct} - delete from cursor to } (not inclusive) and then go into insert mode
+ctT - delete from cursor to T (not inclusive) and then go into insert mode
+cfT - delete from cursor to T (INCLUSIVE) and go into insert mode
+dt} - delete from cursor to } (not inclusive)
+
+~ - Swap case of the current character
+10~ - swap case of the next 10 characters
+; - do command again, but until the current line?
+
+>> - indent current line (use in visual mode to indent blocks)
+5>> - indent next 5 lines
+
+## DELETING AND COPYING
+
+x - DELETE one character
+10x - DELETE ten characters to the right
+dd - DELETE line, and add it to clipboard
+25dd - delete 25 lines down, add to clipboard
+yy - COPY current line on clipboard
+p - paste copied line below current line
+P (caps) - paste copied line ABOVE current line
+D (caps) - delete rest of the line from cursor
+C (caps) - delete rest of line and go into insert mode
+
+## VISUAL MODE
+
+v - VISUAL MODE
+V (caps) - VISUAL MODE (line)
+[ctrl] v - Block visual mode (for vertical selection)
+
+In VISUAL MODE, you can navigate around to select stuff and then press things to do actions 
+on the selected text, like d (delete) or y (copy)
+
+## COMMAND STACK
+
+u - undo last command
+[ctrl] r - redo last command
+. - do last editing command again
+
+zz - center current line vertically on screen
+
+## MACROS
+
+qw - start recording a new macro 'w'
+q - stop recording macro
+@W (caps) - execute macro 'w'
+20@W (caps) - execute macro 'w' 20 times
+
+
+
+
