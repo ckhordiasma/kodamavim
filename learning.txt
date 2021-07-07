@@ -129,6 +129,9 @@ q - stop recording macro
 :sp or :split or [ctrl] w, then n - horizontal split 
 :vs or :vsplit - vertical split
 
+:term - split window horizontally and put terminal there
+:vp term - same but vertically
+
 # navigating through windows
 [ctrl] w, then h, j, k, or l - go left, up, down, or right
 
