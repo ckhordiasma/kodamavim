@@ -123,6 +123,15 @@ q - stop recording macro
 @W (caps) - execute macro 'w'
 20@W (caps) - execute macro 'w' 20 times
 
+## MULTI-WINDOWS
+
+# Spawning windows
+:sp or :split or [ctrl] w, then n - horizontal split 
+:vs or :vsplit - vertical split
+
+# navigating through windows
+[ctrl] w, then h, j, k, or l - go left, up, down, or right
+
 
 
 
